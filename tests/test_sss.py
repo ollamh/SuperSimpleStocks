@@ -32,7 +32,16 @@ class StockTest(unittest.TestCase):
 
     def test_add_stock_ok(self):
         self.gbce.add_stock('NEW', 'Common', 60, 23)
-        self.assertIn('NEW', list(self.gbce.stocks.keys()))
+        self.assertIn('NEW', self.gbce.stocks.keys())
+
+    def test_get_stock_ok(self):
+        stock = self.gbce.get_stock('ALE')
+        self.assertEqual(stock, self.gbce.stocks['ALE'])
+
+    def test_get_stock_fail(self):
+        with self.assertRaisesRegex(
+                AssertionError, 'Stock symbol should exist'):
+            self.gbce.get_stock('EEE')
 
     def test_wrong_type_stock_initialization(self):
         with self.assertRaisesRegex(

@@ -1,0 +1,3 @@
+[report]
+omit = *numpy*, *virtualenvs*, *python*
+show_missing = True
