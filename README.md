@@ -84,9 +84,7 @@ This will load into gbce object a set described in the task.
 
 
      from sss import GBCE, Stock
-    
      gbce = GBCE()
-    
      gbce.add_stock('CMS', 'Common', 200, 8)
      gbce.add_stock('PMT', 'Preferred', 100, 10, 0.04)
 
