@@ -83,12 +83,12 @@ This will load into gbce object a set described in the task.
 7. The usage of the classes could be like this:
 
 
-    from sss import GBCE, Stock
+     from sss import GBCE, Stock
     
-    gbce = GBCE()
+     gbce = GBCE()
     
-    gbce.add_stock('CMS', 'Common', 200, 8)
-    gbce.add_stock('PMT', 'Preferred', 100, 10, 0.04)
+     gbce.add_stock('CMS', 'Common', 200, 8)
+     gbce.add_stock('PMT', 'Preferred', 100, 10, 0.04)
 
 
 Now, you have two stocks and you can do operations:
@@ -101,11 +101,3 @@ Now, you have two stocks and you can do operations:
     stock.p_e_ratio(100)
     
     stock.volume_weighted_stock_price()
-
-
-    
-    
-       
-    
-
- 
